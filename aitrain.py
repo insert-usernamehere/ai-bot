@@ -43,4 +43,4 @@ async def stopbot(ctx):
         textgen.train_from_file('train.txt', num_epochs=1)
 
 
-client.run('Nzk0MzgwMDQ5MzUxOTY2NzQy.X-5-Eg.5mYRMnHxHYqFQZKbbnY8cyTxOzQ')
+client.run('BOTTOKEN')
