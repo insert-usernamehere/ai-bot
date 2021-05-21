@@ -40,7 +40,7 @@ async def train(ctx):
 async def stopbot(ctx):
     if ctx.author.id == 666378959184855042:
         await ctx.send("data collection done, I will now log of discord and build an a.i")
-        textgen.train_from_file('train.txt', num_epochs=1)
+        textgen.train_from_file('train.txt', num_epochs=11)
 
 
 client.run('BOTTOKEN')
