@@ -30,9 +30,8 @@ async def on_message(message):
             elif message.content.lower().startswith("—"):
                 pass
             else:
-                async with message.channel.typing:
-                    writing_function = functools.partial(add_to_train, message.clean_content)
-                    await bot.loop.run_in_executor(None, writing_function)
+                writing_function = functools.partial(add_to_train, message.clean_content)
+                await bot.loop.run_in_executor(None, writing_function)
 
 @commands.is_owner()
 @client.command()
