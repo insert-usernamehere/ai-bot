@@ -21,4 +21,4 @@ async def aiquote(ctx):
         await ctx.send(quote)
 
 
-client.run('Nzk0MzgwMDQ5MzUxOTY2NzQy.X-5-Eg.5mYRMnHxHYqFQZKbbnY8cyTxOzQ')
+client.run('BOTTOKEN')
