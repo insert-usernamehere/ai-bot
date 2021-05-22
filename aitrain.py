@@ -31,7 +31,7 @@ async def on_message(message):
                 pass
             else:
                 writing_function = functools.partial(add_to_train, message.clean_content)
-                await bot.loop.run_in_executor(None, writing_function)
+                await client.loop.run_in_executor(None, writing_function)
 
 @commands.is_owner()
 @client.command()
@@ -45,9 +45,9 @@ async def train(ctx):
 async def stopbot(ctx):
     async with ctx.typing:
         training_function = functools.partial(textgen.train_from_file, 'train.txt', num_epochs=11)
-        await bot.loop.run_in_executor(None, training_function)
+        await client.loop.run_in_executor(None, training_function)
     await ctx.send("data collection done, I will now log of discord and build an a.i")
-    await bot.logout()
+    await client.logout()
 
 
 client.run('BOTTOKEN')
